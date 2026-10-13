@@ -1,0 +1,409 @@
+:root {
+  --primary-color: #20c60e;
+  /* included all headings,subheadings,and buttons */
+  --primary-hover: #388e3c;
+  /* Darker green for hover states */
+  --dark-text: #373636;
+  /* included main text */
+  --light-bg: #e3e0e7;
+  /* included backgrounds of boxes*/
+  --border-color: #3510f0;
+  /* included border color */
+  --background-color: #faf4f4;
+  /* included background of the page */
+  --font-family: 'Poppins', sans-serif;
+  /* Font family for text is used to style the text elements */
+}
+
+/* Reset some default styles for consistency across browsers */
+
+* {
+  /* this is used to style all the elements at once */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the element's total width and height */
+  margin: 0;
+  padding: 0;
+}
+
+/* this styling is for overall body (General Styles) */
+body {
+  font-family: var(--font-family);
+  color: var(--dark-text);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+/* Header Section Styles */
+.header {
+  border-bottom: 3px solid var(--border-color);
+  /*separates the header from the rest of the content with a border */
+  padding: 24px 16px;
+  /* Adds padding around the header content */
+  background-color: var(--light-bg);
+  text-align: center;
+}
+
+/*welcome to EmpKhet heading styling*/
+.header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 6px;
+  /* Adds space below the heading */
+}
+
+/*welcome to EmpKhet subheading styling*/
+.header p {
+  color: #555555;
+  font-size: 1rem;
+}
+
+/* Navigation Menu Styles in header */
+.nav-menu {
+  display: flex;
+  /* Uses flexbox for horizontal layout */
+  justify-content: center;
+  /* Centers the navigation links */
+  list-style: none;
+  /* Removes default list styling 1,2,3,4 */
+  gap: 16px;
+  /* Adds space between navigation links */
+  margin-top: 14px;
+  /* Adds space above the navigation menu */
+}
+
+/*diffrence between the .nav-menu and .nav-menu a is that .nav-menu targets the unordered list container, while .nav-menu a targets the individual links within that list */
+
+/* Navigation Links Styles */
+.nav-menu a {
+  text-decoration: none;
+  /* Removes underline from links */
+  color: #333333;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  /* Rounds the corners of the link background */
+}
+
+/*?????????????????????????????*/
+.nav-menu a:hover {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+
+/* Main Content Styles */
+.main-content {
+  /* Styles for the main content area */
+  max-width: 1000px;
+  /*it is the adjustable width of the main content area, ensuring it doesn't stretch too wide on large screens */
+  width: 100%;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/*space between sections and headings to upward */
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  /* Adds space below section headings */
+}
+
+
+/* Profile Card Styles */
+.profile-card {
+  border: 2px solid var(--primary-color);
+  padding: 18px;
+  margin: 14px 0;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  /* Rounds the corners of the profile card */
+}
+
+/* Farmer Name Styling */
+#farmerName {
+  /*using id selector to target the specific element with the id "farmerName" */
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 8px;
+  /* Adds space below the farmer's name */
+}
+
+/* Farmer Details Styling */
+.profile-card p {
+  margin-bottom: 6px;
+}
+
+/* Crop List Styles */
+.crop-list {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.grid {
+  /* Styles for a grid layout to display cards or items in a structured manner */
+  display: grid;
+  /* it maintain the space between the cards and ensures they are aligned properly */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  border: 3px solid var(--border-color);
+  /* Adds a border around each card */
+  padding: 16px;
+  /* Adds padding inside each card */
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 3px;
+  /* Adds space below the heading inside the card */
+  margin-bottom: 10px;
+  /* Adds space below the heading inside the card */
+}
+
+/* Yield Table Styles */
+.yield-table {
+  width: 100%;
+  /*it is use because website works on all devices and screen sizes */
+  border-collapse: collapse;
+  /* Ensures borders are collapsed into a single border */
+  margin-top: 12px;
+}
+
+/* Styling for the caption of the yield table */
+.yield-table caption {
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 8px;
+  /* Adds space below the caption */
+  color: #555555;
+}
+
+/* Styling for table headers and cells */
+.yield-table th,
+/* th is used to define the header cells in a table */
+.yield-table td {
+  /* td is used to define the standard data cells in a table */
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+/* Styling for table headers  */
+.yield-table th {
+  background-color: #e8f5e9;
+  color: var(--primary-color);
+}
+
+/* Styling for even rows in the yield table to create a striped effect */
+.yield-table tr:nth-child(even) {
+  background-color: var(--light-bg);
+}
+
+/* Glossary List Styles */
+.glossary-list {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+/* Styling for subheading in the glossary list */
+.glossary-list dt {
+  /* dt is used to define a term in a description list */
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+/* Styling for the first term in the glossary list to remove top margin */
+.glossary-list dt:first-child {
+  margin-top: 0;
+}
+
+/* Styling for the description of terms in the glossary list */
+.glossary-list dd {
+  /* dd is used to provide the description or definition of the term defined by dt */
+  margin-left: 18px;
+  margin-bottom: 8px;
+  color: #444444;
+}
+
+/* Media Box Styles */
+.media-box {
+  margin-bottom: 18px;
+  /* Adds space below each media box */
+}
+
+/* Styling for responsive media elements like images and videos */
+.responsive-media {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  display: block;
+  /* Ensures the media element is displayed as a block-level element */
+}
+
+/* Styling for captions and notes associated with media elements */
+figcaption,
+.media-note {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 6px;
+}
+
+/* trainers dashboard all cards styling */
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* Distributes space evenly between the cards */
+  flex-wrap: wrap;
+  /* Allows the cards to wrap to the next line if they don't fit in one row */
+  gap: 16px;
+  /* Adds space between the cards */
+}
+
+/* Styling for individual cards within the container */
+/*?????????????????????????????????????*/
+.container .card {
+  flex: 1 1 30%;
+  margin: 0;
+}
+
+/* Form Styles */
+.form-box {
+  margin-bottom: 20px;
+  /* Adds space below the form box */
+}
+
+/* Styling for fieldsets to group related form elements */
+fieldset {
+  border: 1px solid var(--border-color);
+  /* Adds a border around the fieldset */
+  padding: 18px;
+  border-radius: 6px;
+  background-color: var(--light-bg);
+}
+
+/* Styling for legends to provide a caption for the fieldset */
+legend {
+  /* legend is used to provide a caption for the fieldset */
+  font-weight: bold;
+  /* Makes the legend text bold */
+  color: var(--primary-color);
+  padding: 0 8px;
+  font-size: 1.1rem;
+}
+
+/* Styling for labels/questions associated with form inputs */
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* Styling for subtitles or radio buttons related to form inputs */
+.form-subtitle {
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* Styling for text inputs, number inputs, select dropdowns, and textareas */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #4e15af;
+  border-radius: 4px;
+  font-family: inherit;
+  /* Ensures the input uses the same font as the rest of the page */
+  font-size: 0.95rem;
+}
+
+/* Styling for form inputs when they are focused (clicked or active) */
+/*******************************************
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+*********************************************/
+
+.radio-options {
+  margin-bottom: 14px;
+}
+
+/* Styling for radio button labels to display them inline with some spacing */
+.radio-options label {
+  display: inline;
+  /* Ensures the radio button labels are displayed inline */
+  font-weight: normal;
+  margin-right: 18px;
+}
+
+/* Styling for the submit button in forms */
+button[type="submit"] {
+  /* Targets the submit button specifically */
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+/*?????????????????????????????????????????*/
+button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Footer Styles */
+.footer {
+  border-top: 2px solid var(--border-color);
+  padding: 20px 16px;
+  margin-top: 40px;
+  text-align: center;
+  background-color: var(--light-bg);
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+
+  /* Adjusts layout for screens smaller than 768px */
+  .container {
+    flex-direction: column;
+    /* Stacks the cards vertically on smaller screens */
+  }
+
+  .grid {
+    /* Adjusts grid layout for smaller screens */
+    grid-template-columns: 1fr;
+  }
+
+  .nav-menu {
+    /* Adjusts navigation menu layout for smaller screens */
+    flex-direction: column;
+    gap: 8px;
+  }
+}

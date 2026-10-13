@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpKhet - Farmer Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section / welcome to EmpKhet -->
+    <header class="header"><!-- class is a container for the header content -->
+        <h1>Welcome to EmpKhet</h1>
+        <p>Track your crop performance and connect with trainers.</p>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#dashboard">Home</a></li>
+                <li><a href="#crops">Crops</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#register">Register Crop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+
+        <!-- Farmer Dashboard Section -->
+        <section id="dashboard" data-section="farmer-profile">
+            <h2>Farmer Dashboard</h2>
+            <div class="profile-card">
+                <h3 id="farmerName">Farmer: Ramesh Patel</h3>
+                <p><strong>Region:</strong> North Zone</p>
+                <p><strong>Total Land:</strong> 5 Acres</p>
+                <p><strong>Primary Crops:</strong> Wheat, Rice</p>
+                <p><strong>Status:</strong> Active EmpKhet Member</p>
+            </div>
+        </section>
+
+        <!--==================================================================
+        =======================================================================-->
+        <!-- your Crop Updates Section -->
+        <section id="crops" data-section="crop-updates">
+            <h2>Your Crops</h2>
+            <ul class="crop-list">
+                <li>Wheat</li>
+                <li>Rice</li>
+                <li>Sugarcane</li>
+            </ul>
+
+            <!--=================================================================================
+        ======================================================================================-->
+            <!-- wheat Crop Cards Section -->
+            <div class="grid">
+                <div class="card" data-crop="wheat">
+                    <h3>Wheat</h3>
+                    <p><strong>Season:</strong> Rabi</p>
+                    <p><strong>Yield:</strong> 2200 kg/acre</p>
+                    <p><strong>Status:</strong> Healthy</p>
+                </div>
+
+                <!-- rice Crop Cards Section -->
+                <div class="card" data-crop="rice">
+                    <h3>Rice</h3>
+                    <p><strong>Season:</strong> Kharif</p>
+                    <p><strong>Yield:</strong> 1800 kg/acre</p>
+                    <p><strong>Status:</strong> Sowing</p>
+                </div>
+
+                <!-- sugarcane Crop Cards Section -->
+                <div class="card" data-crop="sugarcane">
+                    <h3>Sugarcane</h3>
+                    <p><strong>Season:</strong> Annual</p>
+                    <p><strong>Yield:</strong> 3000 kg/acre</p>
+                    <p><strong>Status:</strong> Growing</p>
+                </div>
+            </div>
+        </section>
+
+        <!--=================================================================================
+        ======================================================================================-->
+
+        <!-- Crop Yield Table Section -->
+        <section data-section="crop-yield">
+            <h2>Crop Yield Table</h2>
+            <table class="yield-table">
+                <caption>EmpKhet Seasonal Crop Yield (kg/acre)</caption>
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Yield (kg/acre)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>2200</td>
+                    </tr>
+                    <tr>
+                        <td>Rice</td>
+                        <td>1800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--=================================================================================
+    ======================================================================================-->
+
+        <!-- Crop Terminology Glossary Section -->
+        <section data-section="glossary">
+            <h2>Crop Terminology Glossary</h2>
+            <dl class="glossary-list">
+                <dt>Yield</dt>
+                <dd>The total crop harvested per unit of land (e.g. 2200 kg per acre).</dd>
+
+                <dt>Kharif Season</dt>
+                <dd>Monsoon crops sown in June and harvested in autumn (like Rice).</dd>
+
+                <dt>Rabi Season</dt>
+                <dd>Winter crops sown in October and harvested in spring (like Wheat).</dd>
+            </dl>
+        </section>
+
+        <!--=================================================================================
+        ======================================================================================-->
+
+        <!-- Agri-Training Media Section -->
+        <section data-section="media">
+            <h2>Agri-Training Media</h2>
+
+            <figure class="media-box"><!-- figure element for media content -->
+                <img src="assets/images/farmer.jpg" alt="EmpKhet Farmer Training Session"
+                    class="responsive-media"><!-- responsive image for training session -->
+                <figcaption>Figure: EmpKhet Agricultural Field Training</figcaption><!-- caption for the image -->
+            </figure>
+
+            <!--=================================================================================
+        ======================================================================================-->
+
+            <!-- Video Tutorial Section -->
+            <div class="media-box">
+                <video controls class="responsive-media"><!-- video element with controls for user interaction -->
+                    <source src="assets/videos/training.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="media-note">Video Tutorial: Efficient Water & Irrigation Management</p>
+            </div>
+        </section>
+
+        <!--=================================================================================
+        ======================================================================================-->
+
+        <!-- Trainers Dashboard Section -->
+        <section id="trainers" data-section="trainer-dashboard">
+            <!-- using data attributes for section identification -->
+            <h2>Trainers Dashboard</h2>
+
+            <!-- for first trainer -->
+            <div class="container">
+                <div class="card profile-card">
+                    <h3>Anita Sharma</h3>
+                    <p><strong>Role:</strong> Senior Agronomist</p>
+                    <p><strong>Specialty:</strong> Soil Health & Wheat</p>
+                    <p><strong>Region:</strong> North Zone</p>
+                </div>
+
+                <!-- for second trainer -->
+                <div class="card profile-card"><!-- using data attributes for card identification -->
+                    <h3>Rajesh Kumar</h3>
+                    <p><strong>Role:</strong> Crop Specialist</p>
+                    <p><strong>Specialty:</strong> Rice Crop Management</p>
+                    <p><strong>Region:</strong> North Zone</p>
+                </div>
+
+                <!-- for third trainer -->
+                <div class="card profile-card">
+                    <h3>Sunita Verma</h3>
+                    <p><strong>Role:</strong> Irrigation Engineer</p>
+                    <p><strong>Specialty:</strong> Sugarcane & Water Audits</p>
+                    <p><strong>Region:</strong> South Zone</p>
+                </div>
+            </div>
+        </section>
+
+        <!--=================================================================================
+        ======================================================================================-->
+
+        <!-- Crop Registration Form Section -->
+        <section id="register" data-section="crop-registration">
+            <h2>Register Crop</h2>
+            <form action="#" method="post" class="form-box">
+                <fieldset>
+                    <legend>New Crop Registration</legend>
+
+                    <label for="cropName">Crop Name:</label>
+                    <input type="text" id="cropName" name="cropName" required pattern="[A-Za-z ]+"
+                        placeholder="e.g. Wheat">
+
+                    <label for="expectedYield">Expected Yield (kg):</label>
+                    <input type="number" id="expectedYield" name="expectedYield" required min="1"
+                        placeholder="e.g. 2200">
+
+                    <p class="form-subtitle">Region:</p>
+                    <div class="radio-options">
+                        <label>
+                            <input type="radio" id="regionNorth" name="region" value="North" required> North
+                        </label>
+                        <label>
+                            <input type="radio" id="regionSouth" name="region" value="South"> South
+                        </label>
+                    </div>
+
+                    <button type="submit">Register Crop</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!--=================================================================================
+        ======================================================================================-->
+
+        <!-- Trainer Feedback Form Section -->
+        <section data-section="trainer-feedback">
+            <h2>Trainer Feedback</h2>
+            <form action="#" method="post" class="form-box">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+
+                    <label for="trainerSelect">Select Trainer:</label>
+                    <select id="trainerSelect" name="trainer" required>
+                        <option value="">-- Choose Trainer --</option>
+                        <option value="anita">Anita Sharma (Wheat & Soil)</option>
+                        <option value="rajesh">Rajesh Kumar (Rice Management)</option>
+                        <option value="sunita">Sunita Verma (Irrigation)</option>
+                    </select>
+
+                    <label for="feedbackMsg">Feedback Message:</label>
+                    <textarea id="feedbackMsg" name="feedbackMsg" rows="4" required
+                        placeholder="Type your questions or feedback here..."></textarea>
+
+                    <button type="submit">Submit Feedback</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <!--=====================================================================================
+    ===========================================================================================-->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 EmpKhet Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
